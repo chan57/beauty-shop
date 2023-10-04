@@ -2,9 +2,9 @@
   <header class="header">
     <div class="header-top">
       <div class="href-group">
-        <a class="first-href" href="#">catalog</a>
-        <a href="#">about</a>
-        <a href="#">delivery</a>
+        <div  v-for="(item,i) of menu" :key="i">
+        <a class=item.path href="item.path">{{item.name}}</a>
+      </div>
       </div>
 
       <div class="header-logo">
@@ -14,9 +14,7 @@
       </div>
 
 
-
       <div class="header-search-group">
-
         <a class="cotacts-href" href="#">contacts</a>
         <a href="#" class="header-href-search"
           ><img class="r" src="/svg/header-search.svg"
@@ -26,9 +24,25 @@
   </header>
 </template>
 
+<script setup>
+import {ref} from 'vue'
 
+const menu = [
+  {
+    name:'catalog',
+    path:'/catalog'
+  },
+  {
+    name:'about',
+    path:'/about'
+  },
+  {
+    name:'delivery',
+    path:'/delivery'
+  },
+]
 
-
+</script>
 
 
 
@@ -38,17 +52,17 @@
   height: 121px;
 
   .header-top {
-    height: 121px;
     display: grid;
     grid-template-columns: 1fr 800px 1fr;
     .header-logo {
       display: flex;
       justify-content: center;
-      margin-top: 50px;
+      margin-top: 60px;
     }
     .href-group {
       display: flex;
       justify-content: space-between;
+
       margin-top: 50px;
       margin-left: 70px;
 
@@ -66,10 +80,11 @@
 
     a {
       color: white;
+      text-decoration: none;
     }
 
       .r {
-        width: 110px;
+        width: 80px;
         height: 17px;
       }
 
