@@ -1,15 +1,17 @@
 <script setup>
 import Header from "./components/Layout/Header.vue";
+import Hero from "./components/Layout/Hero.vue"
+import ImageGroup from './components/Layout/ImageGroup.vue'
 </script>
 
 <template>
   <div class="container">
-    
+
     <div class="previy">
       <Header />
-      <a href="#"><img class="line" src="./assets/line2.png"></a>
+      <Hero/>
     </div>
-
+    <ImageGroup/>
 
   </div>
 </template>
@@ -36,18 +38,6 @@ body {
   .previy {
     height: 900px;
     background-image: url("./assets/fon.png");
-
-    .line {
-
-      display: flex;
-      justify-content: center;
-      font-size: 48px;
-      height: 63px;
-      width: 380px;
-      margin-top: 300px;
-      margin-left : 528px;
-      margin-right : 528px;
-    }
   }
 }
 </style>
