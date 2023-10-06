@@ -4,7 +4,8 @@ import Hero from "./components/Layout/Hero.vue";
 import ImageGroup from './components/Layout/ImageGroup.vue';
 import CardDiplom from './components/Layout/CardDiplom.vue';
 import PreEndComponent from './components/Layout/PreEndComponent.vue';
-import Productroup from './components/Layout/Productroup.vue';
+import Productroup from './components/Layout/Productroup.vue'
+import Footer from './components/Layout/Footer.vue'
 
 </script>
 
@@ -19,6 +20,7 @@ import Productroup from './components/Layout/Productroup.vue';
     <CardDiplom/>
     <PreEndComponent/>
     <Productroup/>
+    <Footer/>
   </div>
 </template>
 
