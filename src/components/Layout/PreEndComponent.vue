@@ -11,8 +11,10 @@
 </template>
 
 <style lang="scss" scoped>
+@import url("https://fonts.cdnfonts.com/css/qlassy");
 .contantner {
   display: grid;
+    font-family: "Qlassy", sans-serif;
   grid-template-columns: 50% 50%;
   margin-top: 30px;
   margin-left: 70px;

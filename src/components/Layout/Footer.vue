@@ -38,7 +38,7 @@
 
       <div class="contact">
         <h4>Contact</h4>
-        <h5>
+        <h5 class="contacttext">
           We are open to new opportunities, so you can contact our company
           representatives for any questions
         </h5>
@@ -54,9 +54,11 @@
 </template>
 
 <style lang="scss" scoped>
+@import url("https://fonts.cdnfonts.com/css/qlassy");
 .foot-container {
   background-color: #eee4da;
   margin-top: 70px;
+  font-family: "Qlassy", sans-serif;
 }
 .row {
   display: grid;
@@ -80,6 +82,9 @@
 .pictuersFoterContact {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.contacttext{
+  margin-right: 114px;
 }
 .ContactText {
   margin-top: 0px;
