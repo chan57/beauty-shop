@@ -28,12 +28,13 @@
 .bazabaza {
   width: 720px;
   height: 1000px;
+  display: flex;
   font-family: "Qlassy", sans-serif;
 
   .imag {
     margin-top: 50px;
-    margin-left: 70px;
-    margin-right: 70px;
+    // margin-left: 70px;
+    // margin-right: 70px;
     position: relative;
     .nad2 {
       margin-top: 10px;
@@ -57,8 +58,7 @@
       margin-left: 834px;
       margin-top: 67px;
       width: 493px;
-      color: #000000;
-      // font-family: 'LT Edge 300', sans-serif;
+      color: #555;
     }
 
     .te {
@@ -66,7 +66,7 @@
       margin-left: 834px;
       margin-top: 34px;
       width: 493px;
-      color: rgb(0, 0, 0);
+      color: #555;
     }
 
     .autor {
@@ -74,7 +74,7 @@
       margin-left: 834px;
       margin-top: 54px;
       width: 493px;
-      color: rgb(0, 0, 0);
+      color: #555;
     }
 
     .ceo {
@@ -82,7 +82,7 @@
       margin-left: 834px;
       margin-top: -21px;
       width: 493px;
-      color: rgb(0, 0, 0);
+      color: #555;
     }
   }
 }
