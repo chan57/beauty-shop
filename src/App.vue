@@ -2,6 +2,7 @@
 import Header from "./components/Layout/Header.vue";
 import Hero from "./components/Layout/Hero.vue"
 import ImageGroup from './components/Layout/ImageGroup.vue'
+import CardDiplom from './components/Layout/CardDiplom.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import ImageGroup from './components/Layout/ImageGroup.vue'
       <Hero/>
     </div>
     <ImageGroup/>
+    <CardDiplom/>
 
   </div>
 </template>
@@ -29,12 +31,13 @@ body {
   padding: 0%;
   font-family: "Satoshi", sans-serif;
   //  font-family: 'LT Edge', sans-serif;
-  background-color: #f5ece3;
+
 }
 
 .container {
   max-width: 1440px;
   margin: auto;
+  background-color: #f5ece3;
   .previy {
     height: 900px;
     background-image: url("./assets/fon.png");
