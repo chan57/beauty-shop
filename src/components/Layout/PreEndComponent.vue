@@ -29,7 +29,6 @@
     margin-left: 263px;
     margin-bottom: 97px;
     margin-top: 29px;
-    // position: absolute;
   }
   .insta {
     margin-left: 1006px;

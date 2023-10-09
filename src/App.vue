@@ -1,11 +1,7 @@
 <script setup>
 import Header from "./components/Layout/Header.vue";
 import Hero from "./components/Layout/Hero.vue";
-import ImageGroup from './components/Layout/ImageGroup.vue';
-import CardDiplom from './components/Layout/CardDiplom.vue';
-import PreEndComponent from './components/Layout/PreEndComponent.vue';
-import Productroup from './components/Layout/Productroup.vue'
-import Footer from './components/Layout/Footer.vue'
+
 
 </script>
 
@@ -15,12 +11,7 @@ import Footer from './components/Layout/Footer.vue'
       <Header />
       <Hero/>
     </div>
-
-    <ImageGroup/>
-    <CardDiplom/>
-    <PreEndComponent/>
-    <Productroup/>
-    <Footer/>
+    <router-view/>
   </div>
 </template>
 

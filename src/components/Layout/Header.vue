@@ -3,22 +3,22 @@
     <div class="header-top">
       <div class="href-group">
         <div  v-for="(item,i) of menu" :key="i">
-        <a class=item.path href="item.path">{{item.name}}</a>
+        <router-link class=item.path :to=item.path>{{item.name}}</router-link>
       </div>
       </div>
 
       <div class="header-logo">
-        <a href="#" class="header-href-logo"
+        <router-link to="/" class="header-href-logo"
           ><img src="/svg/header-logo.svg"
-        /></a>
+        /></router-link>
       </div>
 
 
       <div class="header-search-group">
-        <a class="cotacts-href" href="#">contacts</a>
-        <a href="#" class="header-href-search"
+        <router-link class="cotacts-href" to="/contacts">contacts</router-link>
+        <router-link to="/search" class="header-href-search"
           ><img class="r" src="/svg/header-search.svg"
-        /></a>
+        /></router-link>
       </div>
     </div>
   </header>
@@ -41,10 +41,7 @@ const menu = [
     path:'/delivery'
   },
 ]
-
 </script>
-
-
 
 
 <style lang="scss" scoped>
