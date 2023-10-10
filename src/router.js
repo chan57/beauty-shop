@@ -5,6 +5,7 @@ import About from './views/About.vue'
 import Delivery from './views/Delivery.vue'
 import Contacts from './views/Contacts.vue'
 import Order from './views/Order.vue'
+import Orders from './views/Orders.vue'
 
 
 const router = createRouter({
@@ -19,31 +20,31 @@ const router = createRouter({
       path:'/catalog',
       name:'catalog',
       component:Catalog
-
     },
     {
       path:'/about',
       name:'about',
       component:About
-
     },
     {
       path:'/delivery',
       name:'delivery',
       component:Delivery
-
     },
     {
       path:'/contacts',
       name:'contacts',
       component:Contacts
-
     },
     {
-      path:'/order',
+      path:'/order/:idprod?',
       name:'order',
       component:Order
-
+    },
+    {
+      path:'/orders',
+      name:'orders',
+      component:Orders
     },
   ]
 })

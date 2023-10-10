@@ -5,7 +5,7 @@
     </h1>
     <a href="#"><img class="oval" src="src/assets/oval.png" /></a>
     <img class="insta" src="src/assets/inst.png" />
-    <h4 class="textInst">Instagram</h4>
+    <a href="https://www.instagram.com/loftoflotof/"><h4 class="textInst">Instagram</h4></a>
 
   </div>
 </template>
@@ -22,6 +22,9 @@
   .bigTexti {
     width: 600px;
     color: #555;
+  }
+  a {
+    color:#555
   }
   .oval {
     width: 310px;
