@@ -2,13 +2,13 @@
   <div class="manyProducts">
     <div v-for="(img, i) in datImageProd" :key="i">
       <div class="images">
-        <a :href="img.href"><img class="img" :src="img.src" /> </a>
+        <img class="img" :src="img.src" />
 
       </div>
     </div>
     <div v-for="(img, i) in datImageProd2" :key="i">
       <div class="imagess">
-        <a :href="img.href"><img class="img" :src="img.src" /> </a>
+       <img class="img" :src="img.src" /> 
 
       </div>
     </div>
