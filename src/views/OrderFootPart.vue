@@ -8,8 +8,6 @@
 
       <img class="immg" src="/src/assets/photForOrder.png">
 
-
-
   </div>
 </template>
 

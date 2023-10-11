@@ -35,6 +35,8 @@
 
 <script setup>
 import { ref, watch } from "vue";
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue";
 import OrderFootPart from "./OrderFootPart.vue";
 
@@ -42,6 +44,7 @@ import OrderFootPart from "./OrderFootPart.vue";
 // console.log($route.path);
 //  console.log($route.params.idprod);
 //  console.log(route.params.idprod);
+const store = useStore()
 
 const numbPict = ref(window.location.href);
 let index = ref(numbPict.value.split("")[numbPict.value.split("").length - 1]);
@@ -66,9 +69,14 @@ let fixValue = 0;
 })();
 
 function addShopiCart() {
+  //perevirka na 0<
   alert(
     `add ${inputValueProduct.value} product for the price ${datImage.value.text}$`
   );
+  store.state.value = inputValueProduct.value;
+  store.state.price = datImage.value.text;
+  store.state.pathElement = datImage.value.src;
+  // console.log(store.state.value)
 }
 
 watch(butAddFavBoll, (newbutFav, oldbutFuv) => {

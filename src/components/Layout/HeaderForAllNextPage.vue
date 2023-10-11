@@ -16,7 +16,7 @@
 
       <div class="header-search-group">
         <router-link class="cotacts-href" to="/contacts">contacts</router-link>
-        <router-link to="/search" class="header-href-search"
+        <router-link to="/orders" class="header-href-search"
           ><img class="r" src="/svg/HeadSearch2.svg"
         /></router-link>
       </div>

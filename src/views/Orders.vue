@@ -2,7 +2,11 @@
   <div>
 
     <HeaderForAllNextPage/>
-    <h2>orders ili proshe govorya korzina</h2>
+    <h1>korzina</h1>
+    <h2>  product: {{$store.state.value}}</h2>
+    <h2>price: {{$store.state.price}}$</h2>
+    <!-- <h2>{{$store.state.pathElement}}</h2> -->
+    <img :src="$store.state.pathElement">
   </div>
 </template>
 
