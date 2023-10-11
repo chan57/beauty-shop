@@ -1,8 +1,8 @@
 <template>
   <div>
-    
+
     <HeaderForAllNextPage/>
-    <h2>orders</h2>
+    <h2>orders ili proshe govorya korzina</h2>
   </div>
 </template>
 
