@@ -16,9 +16,13 @@ import { createStore } from 'vuex'
 
 
 const state = {
-  value:0,
-      price:0,
-      pathElement:'',
+
+  // value:0,
+  // price:0,
+  // pathElement:'',
+  orderArrayObj:[],
+  pathElementFavorite:[],
+
 }
 
 

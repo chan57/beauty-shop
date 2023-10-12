@@ -73,21 +73,21 @@ function addShopiCart() {
   alert(
     `add ${inputValueProduct.value} product for the price ${datImage.value.text}$`
   );
-  store.state.value = inputValueProduct.value;
-  store.state.price = datImage.value.text;
-  store.state.pathElement = datImage.value.src;
-  // console.log(store.state.value)
+  store.state.orderArrayObj.push({
+    value:inputValueProduct.value,
+    price:datImage.value.text,
+    pathImg:datImage.value.src
+  })
 }
 
 watch(butAddFavBoll, (newbutFav, oldbutFuv) => {
-  // console.log(newbutFav);
+  store.state.pathElementFavorite.push(datImage.value.src);
   alert("add to favorite");
 });
 
 watch(inputValueProduct, (newInp, oldInp) => {
   datImage.value.text = 0;
   datImage.value.text += fixValue * newInp;
-  // console.log(fixValue)
 });
 </script>
 
