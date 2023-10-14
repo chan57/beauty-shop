@@ -40,6 +40,7 @@
     <div class="showMes" v-else>
       <h1>Shoping cart is empty</h1>
       <h2 class="zeleniu">Add orders in catalog</h2>
+       <router-link class="hrevff" to="/catalog">Go to Catalog</router-link>
     </div>
   </div>
 </template>
@@ -84,6 +85,14 @@ function clearFavoriteFunc() {
     text-align: center;
     .zeleniu {
       color: darkcyan;
+    }
+    .hrevff{
+    display: flex;
+      margin-top: 40px;
+      justify-content: center;
+      font-family: "Qlassy", sans-serif;
+  color: #b08b66;
+
     }
   }
   .textiLogo {
