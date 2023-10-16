@@ -1,81 +1,63 @@
 <template>
   <div class="contDelivery">
-
-    <HeaderForAllNextPage/>
+    <HeaderForAllNextPage />
     <div class="contDelivery2">
       <div class="maryMe">
-      <h1>About Boltaeva</h1>
-        <h4>The brand seeks to build respect among the audience for its products, so that the presence of the company's products is a sign of prestige, since the focus of the business is focused on exclusive sales, but not on the mass market. The brand seeks to build respect among the audience for its products, so that the presence of the company's products is a sign of prestige, since the focus of the business is focused on exclusive sales, but not on the mass market.</h4>
+        <h1>About Boltaeva</h1>
+        <h4>
+          The brand seeks to build respect among the audience for its products,
+          so that the presence of the company's products is a sign of prestige,
+          since the focus of the business is focused on exclusive sales, but not
+          on the mass market. The brand seeks to build respect among the
+          audience for its products, so that the presence of the company's
+          products is a sign of prestige, since the focus of the business is
+          focused on exclusive sales, but not on the mass market.
+        </h4>
+      </div>
+
+      <div class="dliveryBody">
+        <img class="img" src="/src/assets/about.png" />
+      </div>
     </div>
-
-    <div class="dliveryBody">
-
-    <img class="img" src="/src/assets/about.png">
-    </div>
-
-    </div>
-<router-link class="hrevff" to="/catalog">Go to Catalog</router-link>
-   <router-link class="hrevff" to="/">Go to Home</router-link>
-
+    <router-link class="hrevff" to="/catalog">Go to Catalog</router-link>
+    <router-link class="hrevff" to="/">Go to Home</router-link>
   </div>
 </template>
 
 <script setup>
-// import Header from "../components/Layout/Header.vue";
-import HeaderForAllNextPage from '../components/Layout/HeaderForAllNextPage.vue'
+import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue";
 </script>
 
 <style lang="scss" scoped>
 @import url("https://fonts.cdnfonts.com/css/satoshi");
 .contDelivery {
-
-  .contDelivery2{
+  .contDelivery2 {
     margin-top: 30px;
     margin-bottom: 20px;
     display: grid;
     grid-template-columns: 50% 50%;
-     .dliveryBody {
-    font-family: "Qlassy", sans-serif;
-    // display: grid;
-    // text-align: center;
-    // margin-top: 50px ;
-    // justify-content: center;
-    .img {
-      max-width: 720px;
-    }
-
-  }
-  .maryMe {
-    background-color: rgb(250, 255, 255);
-
-    h1{
-// margin-left: 70px;
+    .dliveryBody {
       font-family: "Qlassy", sans-serif;
-  color: #4d4b4b;
+      .img {
+        max-width: 720px;
+      }
     }
+    .maryMe {
+      background-color: rgb(250, 255, 255);
 
-    h4 {
-      // margin-left: 70px;
-      // display: grid;
-      // justify-content: start;
-      max-width: 800px;
-       color: #8d8080;
+      h1 {
+        font-family: "Qlassy", sans-serif;
+        color: #4d4b4b;
+      }
+      h4 {
+        max-width: 800px;
+        color: #8d8080;
+      }
     }
   }
-
-
-
-
-
-
-
-    }
-      .hrevff{
+  .hrevff {
     display: flex;
-      // margin-top: 40px;
-      // margin-left: 70px;
-
-  color: #b08b66;
+    color: #b08b66;
   }
 }
 </style>

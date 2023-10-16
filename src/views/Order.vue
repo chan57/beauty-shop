@@ -14,7 +14,7 @@
           >
             add to favorite
           </button>
-
+          
           <h1>{{ nazva }}</h1>
           <input
             class="inpValue"
@@ -27,7 +27,6 @@
           <h5>{{ teztAbout }}</h5>
         </div>
       </div>
-
       <OrderFootPart />
     </div>
   </div>
@@ -40,10 +39,6 @@ import { useStore } from 'vuex'
 import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue";
 import OrderFootPart from "./OrderFootPart.vue";
 
-//why not defined ??
-// console.log($route.path);
-//  console.log($route.params.idprod);
-//  console.log(route.params.idprod);
 const store = useStore()
 
 const numbPict = ref(window.location.href);
@@ -69,8 +64,13 @@ let fixValue = 0;
 })();
 
 function addShopiCart() {
-  //perevirka na 0<
-  alert(
+  if(inputValueProduct.value < 0) {
+    alert('not a true value! take button to bay de product pls');
+     inputValueProduct.value = 0;
+  }
+
+  else {
+    alert(
     `add ${inputValueProduct.value} product for the price ${datImage.value.text}$`
   );
   store.state.orderArrayObj.push({
@@ -78,6 +78,8 @@ function addShopiCart() {
     price:datImage.value.text,
     pathImg:datImage.value.src
   })
+  }
+
 }
 
 watch(butAddFavBoll, (newbutFav, oldbutFuv) => {

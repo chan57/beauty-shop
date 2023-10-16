@@ -5,9 +5,8 @@
       <div class="textiLogo">
         <h1>My orders</h1>
       </div>
-
-      <h2>Quantity orders: {{}}</h2>
-      <h2>Total price: {{}}$</h2>
+      <h2 class="total-value">Quantity orders -- {{ valuee }}</h2>
+      <h2 class="total-value">Total price -- {{ pricee }}$</h2>
       <br />
       <div
         class="orderArray"
@@ -20,7 +19,6 @@
           <h2>Price: {{ obj.price }}$</h2>
         </div>
       </div>
-
       <button @click="clearOrdersFunc" class="clearOrders">clear Orders</button>
       <br />
 
@@ -32,7 +30,6 @@
       >
         <img :src="el" />
       </div>
-
       <button @click="clearFavoriteFunc" class="clearFavorite">
         clear Favorite
       </button>
@@ -51,6 +48,8 @@ import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue"
 import { useStore } from "vuex";
 import { ref } from "vue";
 const store = useStore();
+let pricee = ref(0);
+let valuee = ref(0);
 
 function ifStore() {
   if (
@@ -62,7 +61,6 @@ function ifStore() {
     return false;
   else return true;
 }
-
 function clearOrdersFunc() {
   store.state.orderArrayObj = "";
   console.log(store.state.orderArrayObj.length);
@@ -70,6 +68,21 @@ function clearOrdersFunc() {
 function clearFavoriteFunc() {
   store.state.pathElementFavorite = "";
 }
+
+(function value(){
+   pricee.value = 0;
+   valuee.value = 0;
+  for(let el of store.state.orderArrayObj){
+    pricee.value += el.price;
+    valuee.value += el.value;
+    console.log(valuee.value);
+  }
+
+})()
+
+
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -79,6 +92,10 @@ function clearFavoriteFunc() {
   margin-top: 25px;
   margin-left: 70px;
   margin-right: 70px;
+
+  .total-value {
+    color:rgb(124, 115, 102)
+  }
   .textfavprod{
       text-align: center;
   }
@@ -90,7 +107,7 @@ function clearFavoriteFunc() {
     }
     .hrevff{
     display: flex;
-      
+
       justify-content: center;
       font-family: "Qlassy", sans-serif;
   color: #b08b66;
