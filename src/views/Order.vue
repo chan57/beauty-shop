@@ -2,23 +2,20 @@
   <div>
     <HeaderForAllNextPage />
     <div class="containerOrder">
-       <router-link class="hrevff" to="/catalog">Back to Catalog</router-link>
-       <router-link class="hrevff" to="/orders">Go to Shoping cart</router-link>
+      <router-link class="hrevff" to="/catalog">Back to Catalog</router-link>
+      <router-link class="hrevff" to="/orders">Go to Shoping cart</router-link>
       <div class="images">
-
         <div class="sideImg">
-
           <img class="img" :src="datImage.src" />
         </div>
+
         <div class="sideText">
-          <button
+          <Buttons
             class="buttAddFav"
             role="button"
             @click.once="butAddFavBoll = !butAddFavBoll"
+            >add to favorite</Buttons
           >
-            add to favorite
-          </button>
-
           <h1>{{ nazva }}</h1>
           <input
             class="inpValue"
@@ -26,7 +23,7 @@
             v-model.trim="inputValueProduct"
           />
           <h2>price: {{ datImage.text }}$</h2>
-          <button @click="addShopiCart">add to shoping cart</button>
+          <Buttons @click="addShopiCart">add to shoping cart</Buttons>
           <h4>About Product</h4>
           <h5>{{ teztAbout }}</h5>
         </div>
@@ -38,12 +35,13 @@
 
 <script setup>
 import { ref, watch } from "vue";
-import { computed } from 'vue'
-import { useStore } from 'vuex'
+import { computed } from "vue";
+import { useStore } from "vuex";
 import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue";
 import OrderFootPart from "./OrderFootPart.vue";
+import Buttons from "./Buttons.vue";
 
-const store = useStore()
+const store = useStore();
 
 const numbPict = ref(window.location.href);
 let index = ref(numbPict.value.split("")[numbPict.value.split("").length - 1]);
@@ -68,22 +66,19 @@ let fixValue = 0;
 })();
 
 function addShopiCart() {
-  if(inputValueProduct.value < 0) {
-    alert('not a true value! take button to bay de product pls');
-     inputValueProduct.value = 0;
-  }
-
-  else {
+  if (inputValueProduct.value < 0) {
+    alert("not a true value! take button to bay de product pls");
+    inputValueProduct.value = 0;
+  } else {
     alert(
-    `add ${inputValueProduct.value} product for the price ${datImage.value.text}$`
-  );
-  store.state.orderArrayObj.push({
-    value:inputValueProduct.value,
-    price:datImage.value.text,
-    pathImg:datImage.value.src
-  })
+      `add ${inputValueProduct.value} product for the price ${datImage.value.text}$`
+    );
+    store.state.orderArrayObj.push({
+      value: inputValueProduct.value,
+      price: datImage.value.text,
+      pathImg: datImage.value.src,
+    });
   }
-
 }
 
 watch(butAddFavBoll, (newbutFav, oldbutFuv) => {
@@ -100,15 +95,14 @@ watch(inputValueProduct, (newInp, oldInp) => {
 
 <style lang="scss" scoped>
 @import url("https://fonts.cdnfonts.com/css/qlassy");
-.hrevff{
-    display: flex;
-      justify-content: end;
-      margin-bottom: 10px;
-      margin-right: 20px;
-      font-family: "Qlassy", sans-serif;
+.hrevff {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  font-family: "Qlassy", sans-serif;
   color: #b08b66;
-
-    }
+}
 .images {
   font-family: "Qlassy", sans-serif;
   color: #555;
@@ -128,52 +122,6 @@ watch(inputValueProduct, (newInp, oldInp) => {
     .inpValue {
       height: 25px;
       width: 55px;
-    }
-    button {
-      max-width: 160px;
-      align-items: center;
-      appearance: none;
-      background-color: #fffefe;
-      border: 1px solid #dbdbdb;
-      border-radius: 0.375em;
-      box-shadow: none;
-      box-sizing: border-box;
-      color: #202020;
-      cursor: pointer;
-      display: inline-flex;
-      font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
-        Helvetica, Arial, sans-serif;
-      font-size: 1rem;
-      height: 2.5em;
-      justify-content: center;
-      line-height: 1.5;
-      padding: calc(0.5em - 1px) 1em;
-      position: relative;
-      text-align: center;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      vertical-align: top;
-      white-space: nowrap;
-    }
-
-    .button:active {
-      border-color: #4a4a4a;
-      outline: 0;
-    }
-
-    .button:focus {
-      border-color: #485fc7;
-      outline: 0;
-    }
-
-    .button:hover {
-      border-color: #b5b5b5;
-    }
-
-    .button:focus:not(:active) {
-      box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
     }
   }
   .img {

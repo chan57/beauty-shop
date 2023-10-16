@@ -19,7 +19,9 @@
           <h2>Price: {{ obj.price }}$</h2>
         </div>
       </div>
-      <button @click="clearOrdersFunc" class="clearOrders">clear Orders</button>
+      <Buttons @click="clearOrdersFunc" class="clearOrders"
+        >clear Orders</Buttons
+      >
       <br />
 
       <h1 class="textfavprod">My favorite products</h1>
@@ -30,15 +32,15 @@
       >
         <img :src="el" />
       </div>
-      <button @click="clearFavoriteFunc" class="clearFavorite">
+      <Buttons @click="clearFavoriteFunc" class="clearFavorite">
         clear Favorite
-      </button>
+      </Buttons>
     </div>
     <div class="showMes" v-else>
       <h1>Shoping cart is empty</h1>
       <h2 class="zeleniu">Add orders in catalog</h2>
-       <router-link class="hrevff" to="/catalog">Go to Catalog</router-link>
-        <router-link class="hrevff" to="/">Go to Home</router-link>
+      <router-link class="hrevff" to="/catalog">Go to Catalog</router-link>
+      <router-link class="hrevff" to="/">Go to Home</router-link>
     </div>
   </div>
 </template>
@@ -47,6 +49,8 @@
 import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue";
 import { useStore } from "vuex";
 import { ref } from "vue";
+import Buttons from "./Buttons.vue";
+
 const store = useStore();
 let pricee = ref(0);
 let valuee = ref(0);
@@ -69,17 +73,15 @@ function clearFavoriteFunc() {
   store.state.pathElementFavorite = "";
 }
 
-(function value(){
-   pricee.value = 0;
-   valuee.value = 0;
-  for(let el of store.state.orderArrayObj){
+(function value() {
+  pricee.value = 0;
+  valuee.value = 0;
+  for (let el of store.state.orderArrayObj) {
     pricee.value += el.price;
     valuee.value += el.value;
     console.log(valuee.value);
   }
-
-})()
-
+})();
 </script>
 
 <style lang="scss" scoped>
@@ -91,10 +93,10 @@ function clearFavoriteFunc() {
   margin-right: 70px;
 
   .total-value {
-    color:rgb(124, 115, 102)
+    color: rgb(124, 115, 102);
   }
-  .textfavprod{
-      text-align: center;
+  .textfavprod {
+    text-align: center;
   }
   .showMes {
     text-align: center;
@@ -102,13 +104,12 @@ function clearFavoriteFunc() {
       color: darkcyan;
       margin-bottom: 20px;
     }
-    .hrevff{
-    display: flex;
+    .hrevff {
+      display: flex;
 
       justify-content: center;
       font-family: "Qlassy", sans-serif;
-  color: #b08b66;
-
+      color: #b08b66;
     }
   }
   .textiLogo {
@@ -126,54 +127,6 @@ function clearFavoriteFunc() {
   }
   .elementsFav {
     background-color: rgb(112, 41, 41);
-  }
-
-  button {
-    margin-top: 20px;
-    max-width: 160px;
-    align-items: center;
-    appearance: none;
-    background-color: #fffefe;
-    border: 1px solid #dbdbdb;
-    border-radius: 0.375em;
-    box-shadow: none;
-    box-sizing: border-box;
-    color: #202020;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
-      Arial, sans-serif;
-    font-size: 1rem;
-    height: 2.5em;
-    justify-content: center;
-    line-height: 1.5;
-    padding: calc(0.5em - 1px) 1em;
-    position: relative;
-    text-align: center;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: top;
-    white-space: nowrap;
-  }
-
-  .button:active {
-    border-color: #4a4a4a;
-    outline: 0;
-  }
-
-  .button:focus {
-    border-color: #485fc7;
-    outline: 0;
-  }
-
-  .button:hover {
-    border-color: #b5b5b5;
-  }
-
-  .button:focus:not(:active) {
-    box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
   }
 }
 </style>

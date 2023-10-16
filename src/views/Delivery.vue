@@ -17,6 +17,10 @@
 
 <script setup>
 import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue";
+
+function func() {
+  alert("btn")
+}
 </script>
 
 <style lang="scss" scoped>
