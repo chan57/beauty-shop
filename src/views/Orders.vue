@@ -41,6 +41,7 @@
       <h1>Shoping cart is empty</h1>
       <h2 class="zeleniu">Add orders in catalog</h2>
        <router-link class="hrevff" to="/catalog">Go to Catalog</router-link>
+        <router-link class="hrevff" to="/">Go to Home</router-link>
     </div>
   </div>
 </template>
@@ -85,10 +86,11 @@ function clearFavoriteFunc() {
     text-align: center;
     .zeleniu {
       color: darkcyan;
+      margin-bottom: 20px;
     }
     .hrevff{
     display: flex;
-      margin-top: 40px;
+      
       justify-content: center;
       font-family: "Qlassy", sans-serif;
   color: #b08b66;

@@ -4,8 +4,9 @@
     <HeaderForAllNextPage/>
     <div class="containerContacts">
         <h1>Our contacts</h1>
-        <img src="/src/assets/contacts.png">
+        <img class="img" src="/src/assets/contacts.png">
         <router-link class="hrevf" to="/catalog">Go to Catalog</router-link>
+        <router-link class="hrevf" to="/">Go to Home</router-link>
     </div>
 
   </div>
@@ -26,8 +27,12 @@ import HeaderForAllNextPage from '../components/Layout/HeaderForAllNextPage.vue'
       font-family: "Qlassy", sans-serif;
   color: #bab6b6;
     }
+    .img{
+      margin-bottom: 20px;
+    }
     .hrevf{
-      margin-top: 40px;
+
+
       font-family: "Qlassy", sans-serif;
   color: #b08b66;
   size: 110px;
