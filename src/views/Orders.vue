@@ -80,9 +80,6 @@ function clearFavoriteFunc() {
 
 })()
 
-
-
-
 </script>
 
 <style lang="scss" scoped>

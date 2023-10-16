@@ -57,7 +57,7 @@
 @import url("https://fonts.cdnfonts.com/css/qlassy");
 .foot-container {
   background-color: #eee4da;
-  margin-top: 70px;
+  margin-top: 50px;
   font-family: "Qlassy", sans-serif;
 }
 .row {

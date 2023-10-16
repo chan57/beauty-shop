@@ -3,10 +3,9 @@
     <h1 class="bigTexti">
       Boltaeva - this is a real society of girls who show love to themselves
     </h1>
-    <a href="#"><img class="oval" src="src/assets/oval.png" /></a>
+    <!-- <a href="#"><img class="oval" src="src/assets/oval.png" /></a>
     <img class="insta" src="src/assets/inst.png" />
-    <a href="https://www.instagram.com/loftoflotof/"><h4 class="textInst">Instagram</h4></a>
-
+    <a href="https://www.instagram.com/loftoflotof/"><h4 class="textInst">Instagram</h4></a> -->
   </div>
 </template>
 
@@ -14,9 +13,10 @@
 @import url("https://fonts.cdnfonts.com/css/qlassy");
 .contantner {
   display: grid;
-    font-family: "Qlassy", sans-serif;
+  font-family: "Qlassy", sans-serif;
   grid-template-columns: 50% 50%;
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   margin-left: 70px;
   margin-right: 70px;
   .bigTexti {
@@ -24,7 +24,7 @@
     color: #555;
   }
   a {
-    color:#555
+    color: #555;
   }
   .oval {
     width: 310px;

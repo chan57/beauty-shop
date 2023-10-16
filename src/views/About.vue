@@ -32,6 +32,8 @@ import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue"
 @import url("https://fonts.cdnfonts.com/css/satoshi");
 .contDelivery {
   .contDelivery2 {
+    margin-left: 50px;
+    margin-right: 140px;
     margin-top: 30px;
     margin-bottom: 20px;
     display: grid;
@@ -57,6 +59,7 @@ import HeaderForAllNextPage from "../components/Layout/HeaderForAllNextPage.vue"
   }
   .hrevff {
     display: flex;
+    margin-left: 50px;
     color: #b08b66;
   }
 }

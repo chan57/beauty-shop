@@ -2,8 +2,12 @@
   <div>
     <HeaderForAllNextPage />
     <div class="containerOrder">
+       <router-link class="hrevff" to="/catalog">Back to Catalog</router-link>
+       <router-link class="hrevff" to="/orders">Go to Shoping cart</router-link>
       <div class="images">
+
         <div class="sideImg">
+
           <img class="img" :src="datImage.src" />
         </div>
         <div class="sideText">
@@ -14,7 +18,7 @@
           >
             add to favorite
           </button>
-          
+
           <h1>{{ nazva }}</h1>
           <input
             class="inpValue"
@@ -96,7 +100,15 @@ watch(inputValueProduct, (newInp, oldInp) => {
 
 <style lang="scss" scoped>
 @import url("https://fonts.cdnfonts.com/css/qlassy");
+.hrevff{
+    display: flex;
+      justify-content: end;
+      margin-bottom: 10px;
+      margin-right: 20px;
+      font-family: "Qlassy", sans-serif;
+  color: #b08b66;
 
+    }
 .images {
   font-family: "Qlassy", sans-serif;
   color: #555;
