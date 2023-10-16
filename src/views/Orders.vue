@@ -91,7 +91,6 @@ function clearFavoriteFunc() {
   margin-top: 25px;
   margin-left: 70px;
   margin-right: 70px;
-
   .total-value {
     color: rgb(124, 115, 102);
   }
@@ -106,7 +105,6 @@ function clearFavoriteFunc() {
     }
     .hrevff {
       display: flex;
-
       justify-content: center;
       font-family: "Qlassy", sans-serif;
       color: #b08b66;
